@@ -1,0 +1,326 @@
+/* Responsive Design */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .about-text {
+        gap: var(--spacing-md);
+    }
+    
+    .contact-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .footer-content {
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Mobile and Small Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--background-dark);
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: var(--spacing-xl);
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-lg);
+        border-right: 2px solid var(--primary-yellow);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: var(--spacing-md) 0;
+    }
+    
+    .nav-link {
+        font-size: 1.125rem;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .logo-img {
+        height: 45px;
+        margin-right: 10px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: 100px 0 0;
+    }
+    
+    .hero-main {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+        min-height: 60vh;
+    }
+    
+    .hero-content {
+        order: 1;
+    }
+    
+    .hero-visual {
+        order: 2;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        max-width: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .services-title {
+        font-size: 2rem;
+    }
+    
+    .service-item {
+        padding: var(--spacing-lg);
+    }
+    
+    /* About Section Mobile */
+    .about-text {
+        justify-content: center;
+    }
+    
+    .company-story {
+        max-width: 100%;
+    }
+    
+    .company-story p {
+        font-size: 1rem;
+    }
+    
+    /* Products Mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .product-card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Contact Mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .contact-form-container {
+        order: 1;
+    }
+    
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-section:first-child {
+        order: 1;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .services-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .card-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-card,
+    .product-card,
+    .contact-form-container {
+        padding: var(--spacing-md);
+    }
+    
+    .leader-expertise {
+        justify-content: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 100px 0 var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-buttons,
+    .product-cta,
+    .contact-form-container {
+        display: none;
+    }
+    
+    .hero-section,
+    .about-section,
+    .products-section,
+    .contact-section {
+        padding: var(--spacing-lg) 0;
+        page-break-inside: avoid;
+    }
+    
+    .section-title {
+        color: var(--text-primary) !important;
+    }
+    
+    .hero-title {
+        color: var(--text-primary) !important;
+        -webkit-text-fill-color: var(--text-primary) !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-yellow: #B8860B;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --border-light: #000000;
+    }
+    
+    .btn {
+        border: 2px solid var(--text-primary);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
