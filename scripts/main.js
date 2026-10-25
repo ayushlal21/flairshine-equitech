@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Fallback to mailto
                 const subject = `New Inquiry from ${name} - ${service}`;
                 const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nService: ${service}\n\nMessage:\n${message}`;
-                const mailtoLink = `mailto:flairshineequitech@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoLink = `mailto:k.ayush@flairshineequitech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
                 // Open email client
                 window.location.href = mailtoLink;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: phone || 'Not provided',
             service: service,
             message: message,
-            to_email: 'flairshineequitech@gmail.com'
+            to_email: 'k.ayush@flairshineequitech.com'
         };
 
         emailjs.send('service_04cw07a', 'template_ipjbhzu', templateParams)
